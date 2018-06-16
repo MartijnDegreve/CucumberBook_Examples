@@ -1,5 +1,8 @@
-Given("I have deposited ${int} in my account") do |amount|
-    my_account.deposit(amount)
-     expect(my_account.balance).to eq(amount),
+Given("My account had been credited with ${int}") do |amount|
+    my_account.credit(amount)
+end
+
+Then("The balance of my account should be ${int}") do |amount|
+    expect(my_account.balance).to eq(amount),
         "Expected the balance to be #{amount} but it was #{my_account.balance}"
 end

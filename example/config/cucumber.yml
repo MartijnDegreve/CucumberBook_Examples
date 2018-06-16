@@ -1,0 +1,3 @@
+# config/cucumber.yml
+---
+default: -r features/helpers -r features/pages -r features/step_definitions -r features/support -r features/domain
